@@ -32,4 +32,19 @@
       <listener-class>com.example.guestbook.OfyHelper</listener-class>
     </listener>
 <!-- [END Objectify] -->
+
+<!-- [START Restlet] -->
+    <servlet>
+        <servlet-name>RestletServlet</servlet-name>
+        <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+        <init-param>
+             <param-name>org.restlet.application</param-name>
+             <param-value>com.example.guestbook.FirstStepsApplication  </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RestletServlet</servlet-name>
+        <url-pattern>/rest/guestbook/*</url-pattern>
+    </servlet-mapping>
+<!-- [END Restlet] -->
 </web-app>
